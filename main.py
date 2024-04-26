@@ -23,13 +23,12 @@ def get_pieces() -> dict[str, Piece]:
     ).content, 'lxml', parse_only=SoupStrainer({'tr': {'class':'IV_ITEM'}}))
 
     for piece in soup.select('tr.IV_ITEM'):
-        id = piece['class'][0].replace('IV_', '')
+        name = piece.select('td')[3].text
         quantity = int(piece.select_one('td[align="RIGHT"]').text.strip())
-        try: pieces[id].total_quantity += quantity
-        except: pieces[id] = Piece(
-            id, piece.select('td')[3].text,
-            quantity,
-            quantity,
+        try: pieces[name].total_quantity += quantity
+        except: pieces[name] = Piece(
+            piece['class'][0].replace('IV_', ''),
+            name, quantity, quantity,
             piece.select_one('img')['src'],
             BASE_URL + piece.select_one('a')['href']
         )
