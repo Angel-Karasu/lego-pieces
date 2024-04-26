@@ -1,3 +1,4 @@
+#!/bin/python
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
 from dataclasses import dataclass
