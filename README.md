@@ -1,6 +1,6 @@
 # Lego pieces
 
-This is a simple project to find the pieces in a pack of Lego.
+This is a simple project to save the list of pieces in a pack of Lego in a csv file
 
 ## Installation
 
