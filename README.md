@@ -6,7 +6,7 @@ This is a simple project to save the list of pieces in a pack of Lego in a csv f
 
 Clone this repository, set the virtual environnement and install all requirements packages
 ```shell
-git clone https://github.com/Angel-Karasu/lego-pieces.git; cd lego-pieces;
+git clone https://codeberg.org/Angel-Karasu/lego-pieces.git; cd lego-pieces;
 virtualenv venv; source venv/bin/activate;
 pip install -r requirements.txt;
 ```
